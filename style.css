@@ -1,0 +1,119 @@
+/*Reset básico del navegador para poder mantener un estilo global*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0f0f1a;
+  color: #f5f5f5;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/*Cabecera*/
+header {
+  text-align: center;
+  padding: 20px;
+  border-bottom: 2px solid #00ffff;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #fcfcfc;
+  text-shadow: 0 0 5px #fafafa;
+}
+
+header h5 {
+  color: #00ffff;
+  text-shadow: 0 0 4px #00ffff;
+}
+
+.resaltado-net {
+  color: #bb00ff;
+  text-shadow: 0 0 6px #bb00ff;
+}
+
+/*Layout principal*/
+section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 30px 0;
+  flex-wrap: wrap;
+}
+
+/*Imagen de perfil*/
+section article:first-child img {
+  width: 250px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #00ffff;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+/*Animación para la aparción de la imagen de perfil*/
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*Menús desplegables*/
+section article:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 300px;
+}
+
+details {
+  background-color: #1a1a2e;
+  padding: 17px;
+  border: 2px solid #00ffff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #00ffff;
+  transition: all 0.3s ease;
+}
+
+details:hover {
+  box-shadow: 0 0 25px #00ffff;
+}
+
+summary {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #00ffff;
+  cursor: pointer;
+}
+
+ul {
+  margin-left: 20px;
+}
+
+a {
+  color: #bb00ff;
+  text-shadow: 0 0 4px #bb00ff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff;
+}
+
+/*Pie de página*/
+footer {
+  text-align: center;
+  padding: 15px;
+  border-top: 2px solid #00ffff;
+  margin-top: 40px;
+  color: #888;
+}
